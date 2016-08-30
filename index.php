@@ -17,7 +17,7 @@
 	
 	$method		= $_SERVER['REQUEST_METHOD'];
 	$domainURL	= 'http://www.imdb.com';
-	$url 		= $_GET['url'] ?? null;
+	$url 		= isset($_GET['url']) ? $_GET['url'] : null;
     $headers	= getallheaders();
 	if( strposa($url, ['css','jpg','png','js'])  ) $domainURL	= 'http://ia.media-imdb.com';
 
